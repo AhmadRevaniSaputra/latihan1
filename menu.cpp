@@ -19,4 +19,46 @@ void dMenu() {
 // Fungsi untuk menampilkan pesan di Menu Pertama
 void mPertama(string pesan) {
     system("cls");
-    cout << "Hallo, saya 
+    cout << "Hallo, saya menu " << pesan << endl;
+    system("pause");
+}
+
+int main() {
+    char pl;
+    int data[100]; // Variabel lokal
+
+    // Looping menu
+    do {
+        dMenu();
+        cin >> pl;
+
+        switch (pl) {
+            case '1':
+                system("cls");
+                cout << "Masukkan jumlah data: ";
+                cin >> n; // Set variabel n
+                cout << "Data berhasil diinisialisasi.\n";
+                system("pause");
+                break;
+            case '2':
+                mPertama("Ke-2");
+                break;
+            case '3':
+                mPertama("Ke-3");
+                break;
+            case '4':
+                mPertama("Ke-4");
+                break;
+            case '5':
+                break;  // Keluar dari loop
+            default:
+                system("cls");
+                cout << "Pilihan Tidak Tersedia" << endl;
+                system("pause");
+                break;
+        }
+
+    } while (pl != '5');
+
+    return 0;
+}
