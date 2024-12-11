@@ -81,7 +81,20 @@ int main() {
                 system("pause");
                 break;
             case '4':
-                mPertama("Ke-4");
+                system("cls");
+                if (n == 0) {
+                    cout << "Belum ada data untuk diurutkan.\n";
+                } else {
+                    for (int i = 0; i < n - 1; i++) {
+                        for (int j = 0; j < n - i - 1; j++) {
+                            if (data[j] < data[j + 1]) {
+                                tukar(&data[j], &data[j + 1]);
+                            }
+                        }
+                    }
+                    cout << "Data berhasil diurutkan secara descending.\n";
+                }
+                system("pause");
                 break;
             case '5':
                 break;  // Keluar dari loop
