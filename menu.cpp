@@ -46,7 +46,16 @@ int main() {
                 system("pause");
                 break;
             case '2':
-                mPertama("Ke-2");
+                system("cls");
+                if (n == 0) {
+                    cout << "Belum ada data yang dimasukkan.\n";
+                } else {
+                    cout << "Data yang telah dimasukkan:\n";
+                    for (int i = 0; i < n; i++) {
+                        cout << "Data ke-" << i + 1 << ": " << data[i] << endl;
+                    }
+                }
+                system("pause");
                 break;
             case '3':
                 mPertama("Ke-3");
