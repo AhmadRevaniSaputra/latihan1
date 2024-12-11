@@ -37,7 +37,12 @@ int main() {
                 system("cls");
                 cout << "Masukkan jumlah data: ";
                 cin >> n; // Set variabel n
-                cout << "Data berhasil diinisialisasi.\n";
+                cout << "Masukkan data:\n";
+                for (int i = 0; i < n; i++) {
+                    cout << "Data ke-" << i + 1 << ": ";
+                    cin >> data[i];
+                }
+                cout << "Data berhasil dimasukkan.\n";
                 system("pause");
                 break;
             case '2':
